@@ -1,1 +1,1 @@
-"# Angular2-Webpack-Starter" 
+# Angular2-Webpack-Starter
