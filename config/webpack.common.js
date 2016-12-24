@@ -56,7 +56,8 @@ module.exports = {
 
         new CopyWebpackPlugin([
             {
-                from: "public"
+                from: "public",
+                ignore: ["public-readme.txt"]
             }
         ])
     ]
