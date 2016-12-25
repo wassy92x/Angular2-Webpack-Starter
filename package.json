@@ -7,7 +7,7 @@
     "test": "karma start",
     "lint": "tslint \"src/**/*.ts\"",
     "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
-    "add": "node ./add.js"
+    "add": "node node_modules/angularhelperscripts/src/add.js"
   },
   "license": "MIT",
   "dependencies": {
@@ -27,6 +27,7 @@
     "@types/jasmine": "^2.5.35",
     "@types/node": "^6.0.45",
     "angular2-template-loader": "^0.6.0",
+    "angularhelperscripts": "git://github.com/wassy92x/angular_helper_scripts.git#0.1.1",
     "argparse": "^1.0.9",
     "awesome-typescript-loader": "3.0.0-beta.17",
     "codelyzer": "^2.0.0-beta.4",
