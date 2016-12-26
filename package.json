@@ -27,7 +27,7 @@
     "@types/jasmine": "^2.5.35",
     "@types/node": "^6.0.45",
     "angular2-template-loader": "^0.6.0",
-    "angularhelperscripts": "git://github.com/wassy92x/angular_helper_scripts.git#0.1.1",
+    "angularhelperscripts": "git://github.com/wassy92x/angular_helper_scripts.git#0.2.0",
     "argparse": "^1.0.9",
     "awesome-typescript-loader": "3.0.0-beta.17",
     "codelyzer": "^2.0.0-beta.4",
