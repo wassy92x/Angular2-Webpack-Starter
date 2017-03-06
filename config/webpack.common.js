@@ -16,32 +16,34 @@ module.exports = {
     },
 
     resolve: {
-        extensions: ["", ".ts", ".js", ".scss", ".css", ".html"]
+        extensions: [".ts", ".js", ".scss", ".css", ".html"]
     },
 
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.ts$/,
-                loaders: ["awesome-typescript-loader", "angular2-template-loader?keepUrl=true"],
+                use: ["awesome-typescript-loader", "angular2-template-loader?keepUrl=true"],
                 exclude: [/\.(spec|e2e)\.ts$/]
             },
             {
                 test: /\.html$/,
-                loader: "html"
+                use: "html-loader"
             },
             {
                 test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
-                loader: "file?name=assets/[name].[hash].[ext]"
+                use: "file-loader?name=assets/[name].[hash].[ext]"
             },
             {
                 test: /\.global\.scss$/,
-                loader: ExtractTextPlugin.extract("css!sass?sourceMap"),
+                use: ExtractTextPlugin.extract({
+                    use: ["css-loader", "sass-loader?sourceMap"]
+                }),
             },
             {
                 test: /\.scss$/,
                 exclude: [/\.global\.scss$/],
-                loaders: ["raw-loader", "sass-loader"]
+                use: ["raw-loader", "sass-loader"]
             }
         ]
     },
